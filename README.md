@@ -93,6 +93,8 @@ chmod +x download.sh
 | **seq2edit_lang8**[[Link](https://drive.google.com/file/d/13OAJ9DSThqssl93bSn0vQetetLhQz5LA/view?usp=sharing)] | 37.43/26.29/34.50 | 38.08/22.90/33.62 |
 | **seq2edit_lang8+hsk**[[Link](https://drive.google.com/file/d/1ce7t8r3lLUeJ4eIxIg3EpXwHIUE99nk8/view?usp=sharing)] | 43.12/30.18/39.72 | 44.65/27.32/39.62|
 
+下载后，分别解压放入`./models/seq2edit-based-CGEC/exps`和`./models/seq2edit-based-CGEC/exps`即可使用。
+
 我们在论文中使用的模型融合策略请参考`./scorers/ChERRANT/emsemble.sh`。
 
 ### Tips
@@ -103,7 +105,7 @@ chmod +x download.sh
 
 ### 模型评估
 
-针对[NLPCC18官方数据集](http://tcci.ccf.org.cn/conference/2018/taskdata.php)，可使用我们的基准模型预测后，通过NLPCC18的官方工具[M2Scorer](https://github.com/nusnlp/m2scorer)进行计算指标。需要注意的是预测结果必须使用PKUSEG工具分词。
+针对[NLPCC18官方数据集](http://tcci.ccf.org.cn/conference/2018/taskdata.php)，可使用我们的基准模型预测后，通过NLPCC18的官方工具[M2Scorer](https://github.com/nusnlp/m2scorer)进行计算指标。需要注意的是预测结果必须使用PKUNLP工具分词。
 
 针对MuCGEC数据集的相关指标，可以采用我们提供的[ChERRANT](./scorers/ChERRANT)工具进行指标计算。
 ChERRANT的相关使用可参考`./scorers/ChERRANT/demo.sh`。对于字级别指标，我们部分参考了[ERRANT_zh](https://github.com/cehinson/ERRANT_ZH)仓库，词级别指标及错误类型划分我们则参考了[原始ERRANT](https://github.com/chrisjbryant/errant)。
@@ -113,9 +115,13 @@ ChERRANT的相关使用可参考`./scorers/ChERRANT/demo.sh`。对于字级别�
   + M(missing)：缺失错误，需要添加缺失字/词
   + R(redundant)：冗余错误，需要删除冗余字/词
   + S(substitute)：替换错误，需要替换错误字/词
-  + W（word-order）：词序错误，需要进行调序
+  + W(word-order)：词序错误，需要进行调序
+  
 + 语言学级别（仅词粒度）：
   + 我们设计了14种主要的语言学错误类型（基本上是根据词性），除拼写错误(SPELL)和词序错误(W)外，还可以根据替换/删除/冗余操作进一步划分，如`形容词冗余错误`可以表示为：R:ADJ
+  
+    ![error types](./pics/errors.png)
+  
 
 ## 相关工作
 + 我们在CTC2021评测中使用了本仓库的一些技术，并且获得了Top1的成绩，相关技术报告可见：[CTC-report](https://github.com/HillZhang1999/CTC-Report)。

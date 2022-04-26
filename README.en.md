@@ -24,16 +24,16 @@ Chinese Grammatical Error Correction (CGEC) technology aims to automatically cor
 
 Current CGEC evaluation datasets have some flaws, such as small amounts of data, single reference, single text source, etc. In order to better evaluate CGEC models, this repository provide a new multi-reference multi-source CGEC evaluation dataset named **MuCGEC**. Meanwhile, in order to promote the development of CGEC, we also provide the following additional resources:
 
-+ **CGEC data annotation guidelines`./guidelines`**: We define the taxonomy of common Chinese grammatical errors in detail and give the corresponding illustrations for each kind of error, which can promote research in the field of CGEC data annotation.
++ **CGEC data annotation guidelines`./guidelines`**
 
 + **CGEC evaluation tools`./scorers`**:
-  + `ChERRANT`：We modify the English GEC evaluation tool [ERRANT](https://github.com/chrisjbryant/errant) to accomondate Chinese, and name it `ChERRANT`(**Ch**inese **ERRANT**). ChERRANT supports the CGEC model evaluation at both word and character granularity. The char-level ChERRANT metric is the main metric used in MuCGEC paper, which alleviates the inaccurate evaluation caused by word segmentation errors in Chinese. Word-level ChERRANT supports finer error types (such as spelling errors, noun errors, verb errors, etc.), which can help researchers to analyze the model performance better.
+  + `ChERRANT`：We extend the English GEC evaluation tool [ERRANT](https://github.com/chrisjbryant/errant) to accomondate Chinese, and name it `ChERRANT`(**Ch**inese **ERRANT**). ChERRANT supports the CGEC model evaluation at both word and character granularity.
 
 + **CGEC benchmark models`./models`**:
   + **Seq2Edit model`./models/seq2edit-based-CGEC`**: This kind of models treats GEC as a sequence labeling task and performs error corrections via a sequence of token-level edits, including insertion, deletion, and substitution.
     +  With minor modifications to accommodate Chinese, we adopt [GECToR](https://github.com/grammarly/gector), which achieves the SOTA performance on English GEC datasets.
   + **Seq2Seq model`./models/seq2seq-based-CGEC`**：This kind of models straightforwardly treats GEC as a monolingual translation task
-    + We fine-tune the large-scale Seq2Seq pretrained model [Chinese-BART](https://github.com/fastnlp/CPT) and use it in CGEC.
+    + We fine-tune the recently-proposed Seq2Seq pretrained model [Chinese-BART](https://github.com/fastnlp/CPT) and use it in CGEC.
   + **Ensemble model`./scorers/ChERRANT/emsemble.sh`**：We adopt a simple edit-wise vote mechanism, which can support the ensemble of heterogeneous models (such as Seq2Seq and Seq2Edit) and lead to significant performance boosts.
 + **CGEC tools`./tools`**：
   + **Tokenization tools**
@@ -101,7 +101,7 @@ The ensemble strategy used in our paper can be found in `./scorers/ChERRANT/emse
 ### Tips
 + We found that some useful tricks in English are still effective in Chinese, such as the confidence bias trick in GECToR and R2L reranking trick in Seq2Seq models. You can try them yourself.
 + We found that the decomposition of the training procedure (firstly train on HSL+Lang8, then fine-tune on HSK) can lead to further improvement. You can re-train our models following this two-stage training strategy.
-+ Our Seq2Seq models based on [Chinese-BART](https://huggingface.co/fnlp/bart-large-chinese) can be improved: 1) the original vocabulary of Chinese-BART lacks some common Chinese punctuation / characters; 2）The training and generation speed of transformers library is relatively slow, and it also occupies a large amount of GPU memory. We recently re-implement our Seq2Seq model based on [fairseq](https://github.com/pytorch/fairseq) and use some additional tricks, which greatly improved its performance (4-5 F0.5) and accelerated its speed. We will also release the improved version in the future.
++ Our Seq2Seq models based on [Chinese-BART](https://huggingface.co/fnlp/bart-large-chinese) can be improved: 1) the original vocabulary of Chinese-BART lacks some common Chinese punctuation / characters; 2）The training and generation speed of transformers library is relatively slow. We recently re-implement our Seq2Seq model based on [fairseq](https://github.com/pytorch/fairseq) and use some additional tricks, which greatly improved its performance (4-5 F0.5) and accelerated its speed. We will also release the improved version in the future.
 + None of the baselines we provided used pseudo data. For data augmentation, please refer to our paper in CTC-2021 CGEC competition [[Link]](https://github.com/HillZhang1999/CTC-Report). 
 
 ### Evaluation
@@ -116,8 +116,11 @@ To get the evaluation results on MuCGEC, you can evaluate the results through ou
   + R(redundant): Redundant error, which means tokens need to be deleted;
   + S(substitute): Substitued error , which means tokens need to be replaced;
   + W(word-order): Word-error error, which means tokens need to be re-ordered.
+  
 + Linguistic tier (word granularity)：
   + We define 14 main types of linguistic errors (basically based on part-of-speech tags):
+  
+    ![error types](./pics/errors.png)
 
 
 ## Related works
