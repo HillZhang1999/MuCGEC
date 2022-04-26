@@ -72,7 +72,7 @@ pip install -r requirements_seq2seq.txt
 ```
 
 ### Training data
- 
+
 The training data used in our experiment is composed of: 1) Chinese `Lang8` corpus; 2)`HSK` corpus. We upsampling `HSK` corpus 5 times. We only use the erroneous part of the training data.
 
 ```
@@ -90,11 +90,11 @@ We provide pipeline scripts to use our model, including the process of preproces
 Besides, we also provide converged checkpoints for testing (the following metrics are precision/recall/F0.5):
 
 | Model | NLPCC18-Official(m2socrer)| MuCGEC(ChERRANT)|
-| :-------: | :---------:| :---------: | 
-| **seq2seq_lang8**[[Link]()]| 37.78/29.91/35.89 | 40.44/26.71/36.67 |
-| **seq2seq_lang8+hsk**[[Link]()]| 41.50/32.87/39.43 | 44.02/28.51/39.70| 
-| **seq2edit_lang8**[[Link]()] | 37.43/26.29/34.50 | 38.08/22.90/33.62 | 
-| **seq2edit_lang8+hsk**[[Link]()] | 43.12/30.18/39.72 | 44.65/27.32/39.62| 
+| :-------: | :---------:| :---------: |
+| **seq2seq_lang8**[[Link](https://drive.google.com/file/d/1Jras2Km4ScdVB0sx8ePg-PqCmDC4O8v5/view?usp=sharing)] |     37.78/29.91/35.89      | 40.44/26.71/36.67 |
+| **seq2seq_lang8+hsk**[[Link](https://drive.google.com/file/d/180CXiW7pDz0wcbeTgszVoBrvzRmXzeZ9/view?usp=sharing)] |     41.50/32.87/39.43      | 44.02/28.51/39.70 |
+| **seq2edit_lang8**[[Link](https://drive.google.com/file/d/13OAJ9DSThqssl93bSn0vQetetLhQz5LA/view?usp=sharing)] |     37.43/26.29/34.50      | 38.08/22.90/33.62 |
+| **seq2edit_lang8+hsk**[[Link](https://drive.google.com/file/d/1ce7t8r3lLUeJ4eIxIg3EpXwHIUE99nk8/view?usp=sharing)] |     43.12/30.18/39.72      | 44.65/27.32/39.62 |
 
 The ensemble strategy used in our paper can be found in `./scorers/ChERRANT/emsemble.sh`.
 
