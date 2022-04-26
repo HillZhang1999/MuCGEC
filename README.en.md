@@ -120,7 +120,7 @@ To get the evaluation results on MuCGEC, you can evaluate the results through ou
 + Linguistic tier (word granularity)：
   + We define 14 main types of linguistic errors (basically based on part-of-speech tags):
   
-    ![error types](./pics/errors.png)
+    ![error types](./pics/errors.PNG)
 
 
 ## Related works
