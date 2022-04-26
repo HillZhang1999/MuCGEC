@@ -120,7 +120,7 @@ ChERRANT的相关使用可参考`./scorers/ChERRANT/demo.sh`。对于字级别�
 + 语言学级别（仅词粒度）：
   + 我们设计了14种主要的语言学错误类型（基本上是根据词性），除拼写错误(SPELL)和词序错误(W)外，还可以根据替换/删除/冗余操作进一步划分，如`形容词冗余错误`可以表示为：R:ADJ
   
-    ![error types](./pics/errors.png)
+    ![error types](./pics/errors.PNG)
   
 
 ## 相关工作
