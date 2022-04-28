@@ -36,7 +36,7 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICE python -u train.py \
     --seed $SEED \
 
 # Step 3. Inference
-MODEL_PATH=/mnt/nas_alinlp/zuyi.bzy/zhangyue/CGEC-benchmark/models/seq2seq-based-CGEC/exps/seq2seq_lang8
+MODEL_PATH=./exps/seq2seq_lang8
 RESULT_DIR=$MODEL_PATH/results
 mkdir -p $RESULT_DIR
 INPUT_FILE=../../data/test_data/MuCGEC/MuCGEC-ALL/MuCGEC_ALL_Test.input # 输入文件（无需分字）
