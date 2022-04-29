@@ -126,6 +126,8 @@ ChERRANT的相关使用可参考`./scorers/ChERRANT/demo.sh`。对于字级别�
 ## 相关工作
 + 我们在CTC2021评测中使用了本仓库的一些技术，并且获得了Top1的成绩，相关技术报告可见：[CTC-report](https://github.com/HillZhang1999/CTC-Report)。
 + 我们的基线模型提供在线演示平台：[GEC demo](http://139.224.234.18:5002/)。
++ YACLC中文学习者语料库：[YACLC](https://github.com/blcuicall/YACLC)。
++ NLPCC18中文语法纠错数据集：[NLPCC18](https://github.com/zhaoyyoo/NLPCC2018_GEC)。
 
 ## 联系
 如果您在使用我们的数据集及代码的过程中遇到了任何问题，可联系 hillzhang1999@qq.com。
