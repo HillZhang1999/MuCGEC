@@ -95,7 +95,7 @@ chmod +x download.sh
 
 下载后，分别解压放入`./models/seq2edit-based-CGEC/exps`和`./models/seq2edit-based-CGEC/exps`即可使用。
 
-我们在论文中使用的模型融合策略请参考`./scorers/ChERRANT/emsemble.sh`。
+我们在论文中使用的模型融合策略请参考`./scorers/ChERRANT/ensemble.sh`。
 
 ### Tips
 + 我们发现在英文上有用的一些trick，在中文上同样有效，例如GECToR的额外置信度trick和Seq2Seq的R2L-Reranking trick，如果您对模型性能要求较高，可以尝试这些trick。
@@ -125,7 +125,7 @@ ChERRANT的相关使用可参考`./scorers/ChERRANT/demo.sh`。对于字级别�
 
 ## 相关工作
 + 我们在CTC2021评测中使用了本仓库的一些技术，并且获得了Top1的成绩，相关技术报告可见：[CTC-report](https://github.com/HillZhang1999/CTC-Report)。
-+ 我们的基线模型提供在线演示平台：[GEC demo](http://139.224.234.18:5002/)。
++ 我们的基线模型提供在线演示平台：[GEC demo](http://139.224.234.18:5002/) (校外访问可能较慢，请耐心等待)。
 + YACLC中文学习者语料库：[YACLC](https://github.com/blcuicall/YACLC)。
 + NLPCC18中文语法纠错数据集：[NLPCC18](https://github.com/zhaoyyoo/NLPCC2018_GEC)。
 
