@@ -96,7 +96,7 @@ Besides, we also provide converged checkpoints for testing (the following metric
 | **seq2edit_lang8**[[Link](https://drive.google.com/file/d/13OAJ9DSThqssl93bSn0vQetetLhQz5LA/view?usp=sharing)] |     37.43/26.29/34.50      | 38.08/22.90/33.62 |
 | **seq2edit_lang8+hsk**[[Link](https://drive.google.com/file/d/1ce7t8r3lLUeJ4eIxIg3EpXwHIUE99nk8/view?usp=sharing)] |     43.12/30.18/39.72      | 44.65/27.32/39.62 |
 
-The ensemble strategy used in our paper can be found in `./scorers/ChERRANT/emsemble.sh`.
+The ensemble strategy used in our paper can be found in `./scorers/ChERRANT/ensemble.sh`. Please kindly note that above checkpoints are all based on `Chinese-StructBERT-large`. 
 
 ### Tips
 + We found that some useful tricks in English are still effective in Chinese, such as the confidence bias trick in GECToR and R2L reranking trick in Seq2Seq models. You can try them yourself.
