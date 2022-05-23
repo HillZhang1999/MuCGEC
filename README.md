@@ -93,7 +93,7 @@ chmod +x download.sh
 | **seq2edit_lang8**[[Link](https://drive.google.com/file/d/13OAJ9DSThqssl93bSn0vQetetLhQz5LA/view?usp=sharing)] | 37.43/26.29/34.50 | 38.08/22.90/33.62 |
 | **seq2edit_lang8+hsk**[[Link](https://drive.google.com/file/d/1ce7t8r3lLUeJ4eIxIg3EpXwHIUE99nk8/view?usp=sharing)] | 43.12/30.18/39.72 | 44.65/27.32/39.62|
 
-下载后，分别解压放入`./models/seq2edit-based-CGEC/exps`和`./models/seq2edit-based-CGEC/exps`即可使用。以上4个模型全部基于`StructBERT`预训练语言模型。
+下载后，分别解压放入`./models/seq2seq-based-CGEC/exps`和`./models/seq2edit-based-CGEC/exps`即可使用。其中，seq2seq模型基于`Chinese-BART-Large`预训练语言模型，seq2edit模型基于`StructBERT-Large`预训练语言模型。
 
 我们在论文中使用的模型融合策略请参考`./scorers/ChERRANT/ensemble.sh`。
 
