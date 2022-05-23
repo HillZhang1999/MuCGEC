@@ -36,9 +36,10 @@ fi
 PRETRAIN_WEIGHTS_DIR=./plm/chinese-struct-bert-large
 
 mkdir ${MODEL_DIR}/src_bak
-cp ./pipeline.sh $MODEL_DIR
-cp -r ./gector ${MODEL_DIR}/src_bak
-cp ./pipeline.py $MODEL_DIR
+cp ./pipeline.sh $MODEL_DIR/src_bak
+cp -r ./gector $MODEL_DIR/src_bak
+cp ./train.py $MODEL_DIR/src_bak
+cp ./predict.py $MODEL_DIR/src_bak
 
 VOCAB_PATH=./data/output_vocabulary_chinese_char_hsk+lang8_5
 
