@@ -100,7 +100,7 @@ if __name__ == "__main__":
     parser.add_argument("-w", "--worker_num", type=int, help="The number of workers", default=16)
     parser.add_argument("-g", "--granularity", type=str, help="Choose char-level or word-level evaluation", default="char")
     parser.add_argument("-m", "--merge", help="Whether merge continuous replacement/deletion/insertion", action="store_true")
-    parser.add_argument("-s", "--multi_cheapest_strategy", type=str, choices=["first", "all"])
+    parser.add_argument("-s", "--multi_cheapest_strategy", type=str, choices=["first", "all"], default="all")
     parser.add_argument("--segmented", help="Whether tokens have been segmented", action="store_true")  # 支持提前token化，用空格隔开
     parser.add_argument("--no_simplified", help="Whether simplifying chinese", action="store_true")  # 将所有corrections转换为简体中文
     args = parser.parse_args()

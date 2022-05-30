@@ -1,0 +1,5 @@
+ltp==4.1.3.post1
+OpenCC==1.1.2
+python-Levenshtein==0.12.1
+pypinyin
+tqdm
