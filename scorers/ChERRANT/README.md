@@ -73,10 +73,11 @@ python parallel_to_m2.py -f $HYP_PARA_FILE -o $HYP_M2_FILE -g char
 使用如下脚本对比预测编辑文件和标准编辑文件，即可得到字级别的评测指标：
 
 ```
+REF_M2_FILE=./samples/demo.ref.m2.char
 python compare_m2_for_evaluation.py -hyp $HYP_M2_FILE -ref $REF_M2_FILE
 ```
 
-字级别的F0.5指标是MuCGEC数据集采用的官方评测指标，如下所示：
+字级别的F0.5指标是MuCGEC数据集采用的官方评测指标，评价结果如下所示：
 
 ```
 =========== Span-Based Correction ============
