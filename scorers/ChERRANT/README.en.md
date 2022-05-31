@@ -1,10 +1,10 @@
 # Instruction
 
-We have built a Chinese GEC assessment tool, ChERRANT (Chinese ERRANT), using the mainstream English GEC assessment tool [ERRANT](https://github.com/chrisjbryant/errant) for reference. The main function of ChERRANT is to calculate the accuracy, recall and f-value of prediction results by comparing prediction editing and standard editing, thereby evaluating the performance of syntax error correction model.
+We have built a Chinese GEC assessment tool, ChERRANT (Chinese ERRANT), using the mainstream English GEC assessment tool [ERRANT](https://github.com/chrisjbryant/errant) for reference. The primary function of ChERRANT is to calculate the accuracy, recall and f-value of prediction results by comparing prediction editing and standard editing, thereby evaluating the performance of the syntax error correction model.
 
 ## Environment
 
-`Requirements Txt` contains the main environment required for the experiment. The specific environment construction process is as follows:
+`Requirements Txt` contains the primary environment required for the experiment. The specific environment construction process is as follows:
 
 ```
 conda create -n cherrant python==3.8
@@ -31,7 +31,7 @@ A 27 27|||M|||道|||REQUIRED|||-NONE-|||0
 ```
 
 + `S` represents the original sentence;
-+ `T0-A0` represents the 0th editing sequence of the 0th answer (a sentence may have multiple answers, and an answer may also have multiple editing sequences with the same editing distance);
++ `T0-A0` represents the 0th editing sequence of the 0th answer (a penalty may have multiple answers, and an answer may also have various editing sequences with the same editing distance);
 + `A  ` represents editing, mainly including the following information: The start and end positions of errors (`27 27`); Error type (`M`, Missing Error); Modification method of errors (`道`, i.e. insert "道"); Annotation ID (`0`);
 
 #### Evaluation Process
@@ -56,7 +56,7 @@ HYP_PARA_FILE=./samples/demo.hyp.para
 paste $INPUT_FILE $OUTPUT_FILE | awk '{print NR"\t"$p}' > $HYP_PARA_FILE
 ```
 
-Then, extracting the edit with the following command:
+Then, extract the edit with the following command:
 
 ```
 HYP_M2_FILE=./samples/demo.hyp.m2.char
@@ -64,9 +64,9 @@ HYP_M2_FILE=./samples/demo.hyp.m2.char
 python parallel_to_m2.py -f $HYP_PARA_FILE -o $HYP_M2_FILE -g char
 ```
 
-By default, word level edit is extracted.
+By default, word-level edit is extracted.
 
-By setting the ` -g 'parameter to' word ', you can extract word level edit. Although word level edit has marked more error type information, it may be affected by word segmentation errors. For more settings, refer to the command line help file:
+You can extract word-level edit by setting the ` -g `parameter to` word `. Although word-level edit has marked more error type information, they may be affected by word segmentation errors. For more settings, refer to the command line help file:
 
 ```
 python parallel_to_m2.py --help
@@ -74,7 +74,7 @@ python parallel_to_m2.py --help
 
 ### Calculate Evaluation
 
-Using the following script to compare the predicted edit file with the standard edit file to get the word level evaluation indicators:
+Use the following script to compare the predicted edit file with the standard edit file to get the word level evaluation indicators:
 
 ```
 REF_M2_FILE=./samples/demo.ref.m2.char
@@ -90,7 +90,7 @@ TP      FP      FN      Prec    Rec     F0.5
 ==============================================
 ```
 
-The program can also support more fine-grained information display, such as display of detection indicators and correction indicators of different types of errors. If necessary, please refer to the command line help information for use.
+The program can also support more fine-grained information displays, such as displaying detection indicators and correction indicators of different types of errors. If necessary, please refer to the command line help information for use.
 
 ```
 python compare_m2_for_evaluation.py --help
