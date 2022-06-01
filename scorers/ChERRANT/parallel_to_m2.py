@@ -1,7 +1,6 @@
 import os
 from modules.annotator import Annotator
 from modules.tokenizer import Tokenizer
-import torch
 import argparse
 from collections import Counter
 from tqdm import tqdm
@@ -48,10 +47,10 @@ def main(args):
     tokenizer = Tokenizer(args.granularity, args.device, args.segmented)
     global annotator, sentence_to_tokenized
     annotator = Annotator.create_default(args.granularity, args.multi_cheapest_strategy)
-    lines = open(args.file, "r").read().strip().split("\n")  # format: id src tgt1 tgt2...
+    lines = open(args.file, "r", encoding="utf-8").read().strip().split("\n")  # format: id src tgt1 tgt2...
     # error_types = []
 
-    with open(args.output, "w") as f:
+    with open(args.output, "w", encoding="utf-8") as f:
         count = 0
         sentence_set = set()
         sentence_to_tokenized = {}
@@ -84,11 +83,19 @@ def main(args):
             results = tokenizer(batch)
             for s, r in zip(batch, results):
                 sentence_to_tokenized[s] = r  # Get tokenization map.
-        with Pool(args.worker_num) as pool:
-            for ret in pool.imap(annotate, tqdm(lines), chunksize=8):
-                if ret:
-                    f.write(ret)
-                    f.write("\n")
+    
+        # 单进程模式
+        for line in tqdm(lines):
+            ret = annotate(line)
+            f.write(ret)
+            f.write("\n") 
+
+        # 多进程模式：仅在Linux环境下测试，建议在linux服务器上使用
+        # with Pool(args.worker_num) as pool:
+        #     for ret in pool.imap(annotate, tqdm(lines), chunksize=8):
+        #         if ret:
+        #             f.write(ret)
+        #             f.write("\n")
 
 
 if __name__ == "__main__":
