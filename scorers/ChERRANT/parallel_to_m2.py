@@ -4,6 +4,7 @@ from modules.tokenizer import Tokenizer
 import argparse
 from collections import Counter
 from tqdm import tqdm
+import torch
 from collections import defaultdict
 from multiprocessing import Pool
 from opencc import OpenCC
