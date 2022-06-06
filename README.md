@@ -3,6 +3,10 @@
 
 [English](README.en.md) | 简体中文
 
+## 最新消息
+
++ 2022.6.5 MuCGEC数据集作为CCL2022-CLTC评测的Track 4在[阿里云天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)开放，欢迎大家使用和打榜！
+
 ## 引用
 如果您认为我们的工作对您的工作有帮助，请引用我们的论文：
 
@@ -53,7 +57,10 @@
 
 更多关于MuCGEC数据集的细节，请参考我们的论文。
 
-**注：我们目前正在筹划基于MuCGEC数据集的评测任务，所以MuCGEC数据集暂时未放出。我们将会放出开发集，并且以公开榜单的形式放出测试集，请耐心等待。**
+### 数据下载链接
+
+**MuCGEC数据集目前开放了开发集，测试集以在线榜单形式给出，请参考链接[https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328) 使用。**
+<!-- **注：我们目前正在筹划基于MuCGEC数据集的评测任务，所以MuCGEC数据集暂时未放出。我们将会放出开发集，并且以公开榜单的形式放出测试集，请耐心等待。** -->
 
 ## CGEC基准模型
 
@@ -79,7 +86,7 @@ chmod +x download.sh
 ./download.sh
 ```
 
-**注：由于HSK数据集的版权问题，暂时无法提供下载链接，我们将在后续的评测任务中开放HSK数据集。Lang8数据集可以从[NLPCC18-shared task2](http://tcci.ccf.org.cn/conference/2018/taskdata.php)的官方页面找到。**
+**注：由于HSK数据集的版权问题，暂时无法提供下载链接。Lang8数据集可以从[NLPCC18-shared task2](http://tcci.ccf.org.cn/conference/2018/taskdata.php)的官方页面找到。**
 
 ### 模型使用
 我们提供了使用模型的流水线脚本，包含预处理-训练-推理的流程，可参考`./models/seq2edit-based-CGEC/pipeline.sh`及`./models/seq2seq-based-CGEC/pipeline.sh`
