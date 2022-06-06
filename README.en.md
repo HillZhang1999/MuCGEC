@@ -1,7 +1,10 @@
 # MuCGEC: A Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction & SOTA Models
 
 
-[English](README.en.md) | 简体中文
+English | [简体中文](README.md)
+
+## News
++ We have released the whole MuCGEC dataset at [Tianchi Platform](https://tianchi.aliyun.com/dataset?spm=5176.12281949.J_3941670930.15.493e2448TJV71D), welcome to download and test!
 
 ## Citation
 If you find this work is useful for your research, please cite our paper:
@@ -56,7 +59,9 @@ Compared with previous CGEC evaluation sets (such as NLPCC18-orig and CGED-orig)
 
 For more details about MuCGEC, please kindly refer to our paper.
 
-**Note: we are currently planning a CGEC evaluation task at CCL2022 conference based on MuCGEC, so MuCGEC has not been released for the time being. We will release it soon. Please wait patiently.**
+### Download link
+We have released MuCGEC at [https://tianchi.aliyun.com/dataset?spm=5176.12281949.J_3941670930.15.493e2448TJV71D](https://tianchi.aliyun.com/dataset?spm=5176.12281949.J_3941670930.15.493e2448TJV71D).
+<!-- **Note: we are currently planning a CGEC evaluation task at CCL2022 conference based on MuCGEC, so MuCGEC has not been released for the time being. We will release it soon. Please wait patiently.** -->
 
 ## CGEC benchmark models
 
