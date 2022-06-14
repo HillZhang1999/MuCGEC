@@ -4,7 +4,7 @@
 English | [简体中文](README.md)
 
 ## News
-+ We have released the whole MuCGEC dataset at [Tianchi Platform](https://tianchi.aliyun.com/dataset?spm=5176.12281949.J_3941670930.15.493e2448TJV71D), welcome to download and test!
++ We have released a part of MuCGEC dataset at [Tianchi Platform](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328), welcome to download and test!
 
 ## Citation
 If you find this work is useful for your research, please cite our paper:
