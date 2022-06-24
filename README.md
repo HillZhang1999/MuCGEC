@@ -5,7 +5,9 @@
 
 ## 最新消息
 
-+ 2022.6.5 MuCGEC数据集作为CCL2022-CLTC评测的Track 4在[阿里云天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)开放，欢迎大家使用和打榜！
++ **2022.6.23** 我们开源了CTC-2021评测中所搜集的语义纠错模板，请参考：[[Github](https://github.com/HillZhang1999/gec_error_template)]，[[论文](https://arxiv.org/abs/2206.11569)]
+
++ **2022.6.5** MuCGEC数据集作为CCL2022-CLTC评测的Track 4在[阿里云天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)开放，欢迎大家使用和打榜！
 
 ## 引用
 如果您认为我们的工作对您的工作有帮助，请引用我们的论文：
