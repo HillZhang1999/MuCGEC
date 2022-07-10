@@ -12,16 +12,26 @@
 ## 引用
 如果您认为我们的工作对您的工作有帮助，请引用我们的论文：
 
-#### MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction (Accepted by NAACL2022 main conference) [[PDF]](https://arxiv.org/pdf/2204.10994.pdf)
+#### MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction (Accepted by NAACL2022 main conference) [[PDF]](https://aclanthology.org/2022.naacl-main.227.pdf)
 
 ```
 @inproceedings{zhang-etal-2022-mucgec,
-    title = "{MuCGEC}: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction",
-    author = "Zhang, Yue and Li, Zhenghua and Bao, Zuyi and Li, Jiacheng and Zhang, Bo and Li, Chen and Huang, Fei and Zhang, Min",
-    booktitle = "Proceedings of NAACL-HLT",
+    title = "{M}u{CGEC}: a Multi-Reference Multi-Source Evaluation Dataset for {C}hinese Grammatical Error Correction",
+    author = "Zhang, Yue  and
+      Li, Zhenghua  and
+      Bao, Zuyi  and
+      Li, Jiacheng  and
+      Zhang, Bo  and
+      Li, Chen  and
+      Huang, Fei  and
+      Zhang, Min",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
     year = "2022",
-    address = "Online",
-    publisher = "Association for Computational Linguistics"
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.227",
+    pages = "3118--3130",
 ```
 
 ## 简介
