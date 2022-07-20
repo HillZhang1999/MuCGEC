@@ -29,6 +29,6 @@ mkdir -p $RESULT_DIR
 M2_OUTPUT_FILE=$RESULT_DIR/MuCGEC_test.m2_temp
 OUTPUT_FILE=$RESULT_DIR/MuCGEC_test.output
 
-python edit_ensemble.py --result_path $RESULT_FILE1 $RESULT_FILE2 $RESULT_FILE3 $RESULT_FILE4 $RESULT_FILE5 $RESULT_FILE6 --output_path $M2_OUTPUT_FILE --threshold $THRESHOLD
+python rule_ensemble.py --result_path $RESULT_FILE1 $RESULT_FILE2 $RESULT_FILE3 $RESULT_FILE4 $RESULT_FILE5 $RESULT_FILE6 --output_path $M2_OUTPUT_FILE --threshold $THRESHOLD
 
 python m2convertor.py -f $M2_OUTPUT_FILE -o $OUTPUT_FILE
