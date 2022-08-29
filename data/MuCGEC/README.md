@@ -1,5 +1,5 @@
 # MuCGEC数据集说明
-[English Version](https://github.com/HillZhang1999/MuCGEC/edit/main/data/MuCGEC/README.en.md)
+[English Version](https://github.com/HillZhang1999/MuCGEC/data/MuCGEC/README.en.md)
 ## 基本信息
 数据集名称：MuCGEC（Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction）
 
