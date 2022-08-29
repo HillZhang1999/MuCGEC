@@ -4,6 +4,8 @@
 English | [简体中文](README.md)
 
 ## News
++ We have uploaded the full MuCGEC dataset to this [link](https://github.com/HillZhang1999/MuCGEC/tree/main/data/MuCGEC) and opened a leaderboard at [Tianchi Platform](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328#4), welcome to submit your results!
+
 + We have released a part of MuCGEC dataset at [Tianchi Platform](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328), welcome to download and test!
 
 ## Citation
