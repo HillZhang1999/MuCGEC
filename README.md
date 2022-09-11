@@ -97,8 +97,6 @@ pip install -r requirements_seq2seq.txt
 
 下载方式：[Google Drive](https://drive.google.com/file/d/19Yb1tPpCEsr1zUG9j_LHuh3XubQmqq_7/view?usp=sharing)
 
-**注：由于HSK数据集的版权问题，暂时无法提供下载链接。Lang8数据集可以从[NLPCC18-shared task2](http://tcci.ccf.org.cn/conference/2018/taskdata.php)的官方页面找到。**
-
 ### 模型使用
 我们提供了使用模型的流水线脚本，包含预处理-训练-推理的流程，可参考`./models/seq2edit-based-CGEC/pipeline.sh`及`./models/seq2seq-based-CGEC/pipeline.sh`
 
