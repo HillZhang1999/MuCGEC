@@ -95,7 +95,7 @@ pip install -r requirements_seq2seq.txt
 
 我们实验所用训练集为：`Lang8`数据集(来自外语学习网站Lang8）和`HSK`数据集(北语开发的汉语学习考试数据集)中的错误句子，并且对`HSK`数据集上采样5次，过滤掉和我们测试集重复的部分，共计约150万对。
 
-下载方式：[Google Drive](https://drive.google.com/file/d/19Yb1tPpCEsr1zUG9j_LHuh3XubQmqq_7/view?usp=sharing)
+下载方式：[Google Drive](https://drive.google.com/file/d/1l0A50z7fMXjQT3y2ct7TQsEHqOwlvg0_/view?usp=sharing)
 
 ### 模型使用
 我们提供了使用模型的流水线脚本，包含预处理-训练-推理的流程，可参考`./models/seq2edit-based-CGEC/pipeline.sh`及`./models/seq2seq-based-CGEC/pipeline.sh`
