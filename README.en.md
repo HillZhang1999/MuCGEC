@@ -93,7 +93,7 @@ pip install -r requirements_seq2seq.txt
 
 The training data used in our experiment is composed of: 1) Chinese `Lang8` corpus; 2)`HSK` corpus. We upsampling `HSK` corpus 5 times. We only use the erroneous part of the training data.
 
-Download Link: [Google Drive](https://drive.google.com/file/d/19Yb1tPpCEsr1zUG9j_LHuh3XubQmqq_7/view?usp=sharing)
+Download Link: [Google Drive](https://drive.google.com/file/d/1l0A50z7fMXjQT3y2ct7TQsEHqOwlvg0_/view?usp=sharing)
 
 <!-- **Note: the copyright issue about HSK data is under discussion, so the training data download link is not available at present.** -->
 
