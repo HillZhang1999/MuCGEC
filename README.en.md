@@ -95,7 +95,7 @@ The training data used in our experiment is composed of: 1) Chinese `Lang8` corp
 
 Download Link: [Google Drive](https://drive.google.com/file/d/19Yb1tPpCEsr1zUG9j_LHuh3XubQmqq_7/view?usp=sharing)
 
-**Note: the copyright issue about HSK data is under discussion, so the training data download link is not available at present.**
+<!-- **Note: the copyright issue about HSK data is under discussion, so the training data download link is not available at present.** -->
 
 ### Usage
 We provide pipeline scripts to use our model, including the process of preprocessing->training->inference. Please refer to
