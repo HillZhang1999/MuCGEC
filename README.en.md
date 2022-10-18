@@ -4,6 +4,8 @@
 English | [简体中文](README.md)
 
 ## News
++ Our new work SynGEC has been accepted by EMNLP2022. In this paper, we propose a SynGEC model that can utilize GEC-oriented tailored syntax and get SOTA performance (e.g., 45.32/46.51 F0.5 scores on NLPCC-18 and MuCGEC-Test), respectively. Welcome to test it! Link: [[Link]](https://github.com/HillZhang1999/SynGEC) 
+
 + We have uploaded the full MuCGEC dataset to this [link](https://github.com/HillZhang1999/MuCGEC/tree/main/data/MuCGEC) and opened a leaderboard at [Tianchi Platform](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328#4), welcome to submit your results!
 
 + We have released a part of MuCGEC dataset at [Tianchi Platform](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328), welcome to download and test!
