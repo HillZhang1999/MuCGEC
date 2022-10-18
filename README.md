@@ -5,7 +5,7 @@
 
 ## 最新消息
 
-+ **2022.10.18** 我们的最新工作SynGEC被EMNLP2022会议录用，在这篇文章中我们提出的融入适配句法的SynGEC模型可以在NLPCC-18和MuCGEC-Test上取得45.32/46.51的F值。欢迎大家试用！链接：[Link](https://github.com/HillZhang1999/SynGEC)
++ **2022.10.18** 我们的最新工作SynGEC被EMNLP2022会议录用，在这篇文章中我们提出的融入适配句法的SynGEC模型可以在NLPCC-18和MuCGEC-Test上取得45.32/46.51的F值。欢迎大家试用！链接：[[Link]](https://github.com/HillZhang1999/SynGEC)
 
 + **2022.8.29** 我们上传了MuCGEC数据集（含开发集答案和测试集输入）[[Link](https://github.com/HillZhang1999/MuCGEC/tree/main/data/MuCGEC)]，并且在天池平台开放长期测试集评测榜单[[Link](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328#4))，欢迎大家提交结果，提交方式可以参考[[Link](https://github.com/HillZhang1999/MuCGEC/tree/main/data/MuCGEC#%E5%9C%A8%E7%BA%BF%E6%8F%90%E4%BA%A4%E6%B5%8B%E8%AF%95%E9%9B%86)]。
 
