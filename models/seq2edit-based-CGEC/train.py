@@ -141,7 +141,7 @@ def main(args):
     tokens_to_add = {x: default_tokens for x in namespaces}
 
     # build vocab
-    if args.vocab_path:
+    if os.path.exists(args.vocab_path):
         vocab = Vocabulary.from_files(args.vocab_path)
     else:
         vocab = Vocabulary.from_instances(train_data,
