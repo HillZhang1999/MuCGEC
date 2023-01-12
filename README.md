@@ -4,6 +4,7 @@
 [English](README.en.md) | 简体中文
 
 ## 最新消息
++ **2023.1.12** 我们在阿里巴巴魔搭社区开源了两个最新的SOTA纠错模型(基于BART)，分别面向通用领域和法律领域，支持一键调用推理和Demo试玩，欢迎大家试用：[通用领域](https://modelscope.cn/models/damo/nlp_bart_text-error-correction_chinese/summary)，[法律领域](https://modelscope.cn/models/damo/nlp_bart_text-error-correction_chinese-law/summary)。
 
 + **2022.10.18** 我们的最新工作SynGEC被EMNLP2022会议录用，在这篇文章中我们提出的融入适配句法的SynGEC模型可以在NLPCC-18和MuCGEC-Test上取得45.32/46.51的F值。欢迎大家试用！链接：[[Link]](https://github.com/HillZhang1999/SynGEC)
 
