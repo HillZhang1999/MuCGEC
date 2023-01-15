@@ -85,24 +85,14 @@ def read_file():
 
 def main():
     counter = 0
-    fw_src = open(f"{args.p}.src", "w", encoding="utf8")
     fw_trg = open(args.o, "w", encoding="utf8")
-    fw_para = open(f"{args.p}.para", "w", encoding="utf8")
     for src_sent, edit_lines in read_file():
         counter += 1
         m2_item = M2Processor(src_sent, edit_lines)
         trg_sents = m2_item.get_para()
-        fw_para.write(f"S {src_sent}\n")
         prefix_counter = 0
-        for sent in trg_sents:
-            fw_para.write(f"T{prefix_counter} {sent}\n")
-            prefix_counter += 1
-        fw_para.write("\n")
-        fw_src.write(src_sent+"\n")
         fw_trg.write(trg_sents[0]+"\n")
-    fw_src.close()
     fw_trg.close()
-    fw_para.close()
  
 
 if __name__ == "__main__":
