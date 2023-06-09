@@ -22,8 +22,8 @@ def read_cilin():
     Cilin 詞林 is a thesaurus with semantic information
     """
     # TODO -- fix this path
-    lines = open("./data/cilin.txt", "r",
-                 encoding="gbk").read().strip().split("\n")
+    project_dir = os.path.dirname(os.path.dirname(__file__))  # ymliu@2023.5.30 fix the path
+    lines = open(os.path.join(project_dir, "data", "cilin.txt"), "r", encoding="gbk").read().strip().split("\n")
     semantic_dict = {}
     semantic_classes = {}
     for line in lines:
@@ -40,7 +40,8 @@ def read_cilin():
 
 def read_confusion():
     confusion_dict = {}
-    with open("./data/confusion_dict.txt", "r", encoding="utf-8") as f:
+    project_dir = os.path.dirname(os.path.dirname(__file__))  # ymliu@2023.5.30 fix the path
+    with open(os.path.join(project_dir, "data", "confusion_dict.txt"), "r", encoding="utf-8") as f:
         for line in f:
             li = line.rstrip('\n').split(" ")
             confusion_dict[li[0]] = li[1:]

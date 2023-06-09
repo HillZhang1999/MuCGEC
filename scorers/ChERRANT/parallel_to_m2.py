@@ -45,7 +45,7 @@ def annotate(line):
     return output_str
 
 def main(args):
-    tokenizer = Tokenizer(args.granularity, args.device, args.segmented)
+    tokenizer = Tokenizer(args.granularity, args.device, args.segmented, args.bpe)
     global annotator, sentence_to_tokenized
     annotator = Annotator.create_default(args.granularity, args.multi_cheapest_strategy)
     lines = open(args.file, "r", encoding="utf-8").read().strip().split("\n")  # format: id src tgt1 tgt2...
@@ -111,5 +111,6 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--multi_cheapest_strategy", type=str, choices=["first", "all"], default="all")
     parser.add_argument("--segmented", help="Whether tokens have been segmented", action="store_true")  # 支持提前token化，用空格隔开
     parser.add_argument("--no_simplified", help="Whether simplifying chinese", action="store_true")  # 将所有corrections转换为简体中文
+    parser.add_argument("--bpe", help="Whether to use bpe", action="store_true")  # 支持 bpe 切分英文单词
     args = parser.parse_args()
     main(args)
